@@ -286,7 +286,8 @@ function LandingPage2() {
         <div className="modal-body text-center">
           <div style={{ borderBottom: "solid grey 1px" }}>
             <p style={{ fontWeight: "bold", margin: 0 }}>
-              Jika anda mengikuti SNEKTI 2023, tidak perlu registrasi kembali
+              Jika anda mengikuti SNEKTI 2023, menggunakan username & password
+              yang lama
             </p>
           </div>
           <div style={{ borderBottom: "solid grey 1px" }}>

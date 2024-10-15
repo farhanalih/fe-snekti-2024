@@ -2,7 +2,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Button } from "reactstrap";
+import { Container, Button, Row, Col } from "reactstrap";
 // core components
 
 function IndexHeader() {
@@ -42,7 +42,6 @@ function IndexHeader() {
               width={"80%"}
               style={{ marginTop: "148px" }}
             ></img>
-            {/* <h1 className="h1-seo">SNEKT</h1> */}
             <h2
               style={{
                 fontWeight: "bold",
@@ -122,8 +121,23 @@ function IndexHeader() {
                     color: "#2c2c2c",
                   }}
                 >
-                  <span style={{ fontWeight: "bold" }}>Conference</span>: 11
-                  December 2024
+                  <span style={{ fontWeight: "bold" }}>
+                    Seminar & Parallel Session (Hybrid)
+                  </span>
+                  : 11 December 2024
+                </h3>
+                <h3
+                  style={{
+                    margin: 0,
+                    color: "#2c2c2c",
+                    fontWeight: "bold",
+                  }}
+                >
+                  <i
+                    className="now-ui-icons location_pin"
+                    style={{ fontSize: "24px", fontWeight: "bold" }}
+                  ></i>
+                  Institut Teknologi PLN & Zoom
                 </h3>
               </div>
             </div>
