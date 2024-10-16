@@ -104,6 +104,42 @@ function LandingPage2() {
             <Container>
               <Row className="justify-content-center">
                 <Col md="12" className="text-center">
+                  <h2 className="title">Fasilitas</h2>
+                </Col>
+              </Row>
+              <Row className="justify-content-center">
+                <Col xs="auto" md="12" className="text-left">
+                  <ul className="how-to-list">
+                    <li>
+                      Seminar kit
+                    </li>
+                    <li>
+                      Paper terbaik akan diterbitkan pada jurnal terakreditasi SINTA
+                    </li>
+                    <li>
+                      Free Sertifikat
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </Container>
+            </div>
+          <div
+            className="section"
+            style={{
+              padding: "10px",
+              // backgroundImage:
+              //   "url(" + require("assets/img/bg-focus&scope.png") + ")",
+              // backgroundSize: "cover",
+              // height: "100%",
+              // width: "100%",
+              // backgroundPosition: "center",
+            }}
+            id="conference-fee"
+          >
+            <Container>
+              <Row className="justify-content-center">
+                <Col md="12" className="text-center">
                   <h2 className="title">Focus & Scope</h2>
                 </Col>
               </Row>
