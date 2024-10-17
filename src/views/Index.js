@@ -104,26 +104,23 @@ function LandingPage2() {
             <Container>
               <Row className="justify-content-center">
                 <Col md="12" className="text-center">
-                  <h2 className="title">Fasilitas</h2>
+                  <h2 className="title">Facilities</h2>
                 </Col>
               </Row>
               <Row className="justify-content-center">
                 <Col xs="auto" md="12" className="text-left">
                   <ul className="how-to-list">
+                    <li>Seminar kit</li>
                     <li>
-                      Seminar kit
+                      Paper terbaik akan diterbitkan pada jurnal terakreditasi
+                      SINTA
                     </li>
-                    <li>
-                      Paper terbaik akan diterbitkan pada jurnal terakreditasi SINTA
-                    </li>
-                    <li>
-                      Free Sertifikat
-                    </li>
+                    <li>Sertifikat Pemakalah & Non Pemakalah</li>
                   </ul>
                 </Col>
               </Row>
             </Container>
-            </div>
+          </div>
           <div
             className="section"
             style={{
