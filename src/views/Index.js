@@ -299,8 +299,24 @@ function LandingPage2() {
               target="_blank"
               rel="noreferrer"
               className="text-muted"
+              style={{ fontSize: "20px" }}
             >
               Link Article Template
+            </a>
+          </div>
+          <div style={{ borderBottom: "solid grey 1px" }}>
+            <p style={{ fontWeight: "bold", margin: 0 }}>
+              Bagi Pemakalah yang sudah Register atau Submit Artikel SNEKTI 2024
+              silahkan Join Grup WA
+            </p>
+            <a
+              href="https://chat.whatsapp.com/BCyEnuKqgwiA0wsHB14dgr"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted"
+              style={{ fontSize: "20px" }}
+            >
+              Link Grup
             </a>
           </div>
         </div>
