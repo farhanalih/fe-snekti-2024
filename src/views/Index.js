@@ -9,7 +9,7 @@ import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
 
 // sections for this page
-// import Images from "./index-sections/Images.js";
+import Images from "./index-sections/Images.js";
 import BasicElements from "./index-sections/BasicElements.js";
 import Navbars from "./index-sections/Navbars.js";
 import Tabs from "./index-sections/Tabs.js";
@@ -59,6 +59,58 @@ function LandingPage2() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
+          <div 
+            id="speaker-section"
+            style={{
+              marginTop:"16px"
+            }}
+          >
+            <Container>
+            <Row className="justify-content-center">
+                <Col md="12" className="text-center ">
+                  <h2 className="title">Speaker</h2>
+                </Col>
+              </Row>
+            <Row className="justify-content-center">
+              <Col sm="2">
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/julie.jpg")}
+                ></img>
+                <p className="speaker-name">Prof. Dr. Ir. Iwa Garniwa Mulyana K., MT,IPU,ASEAN.Eng</p>
+                <p className="speaker-job">Rektor Institut Teknologi PLN</p>
+              </Col>
+              <Col sm="2">
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/julie.jpg")}
+                ></img>
+                <p className="speaker-name">Prof. Dr. Ir. Arief Sabdo Yuwono, M.Sc</p>
+                <p className="speaker-job">Guru Besar Bidang Teknik Lingkungan IPB University</p>
+              </Col>
+              <Col sm="2">
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/julie.jpg")}
+                ></img>
+                <p className="speaker-name">Prof. Ir. Muhammad Abduh M.T., PhD</p>
+                <p className="speaker-job">Guru Besar Bidang Civil Engineering ITB</p>
+              </Col>
+              <Col sm="2">
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/julie.jpg")}
+                ></img>
+                <p className="speaker-name">Ir. Suroso Isnandar., M.S.</p>
+                <p className="speaker-job">Direksi Manajemen Risiko PT PLN (Persero)</p>
+              </Col>
+            </Row>
+        </Container>
+          </div>
           <div
             className="section"
             style={{
@@ -69,9 +121,9 @@ function LandingPage2() {
               height: "100%",
               width: "100%",
               backgroundPosition: "center",
-            }}
+            }}             
             id="conference-fee"
-          >
+          >    
             <Container>
               <Row className="justify-content-center">
                 <Col md="12" className="text-center ">
