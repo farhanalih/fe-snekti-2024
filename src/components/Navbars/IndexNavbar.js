@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -15,6 +15,7 @@ import {
   Nav,
   Container,
   UncontrolledTooltip,
+  Modal,
 } from "reactstrap";
 
 function IndexNavbar() {
@@ -39,6 +40,23 @@ function IndexNavbar() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
   });
+
+  const [modalLive, setModalLive] = useState(false);
+  const [register, setRegister] = useState(false);
+  const handleClose = () => {
+    setModalLive(false);
+    window.open(
+      "https://snekti.jurnal-puslitbangpln.id/submit/index.php/snekti2023/login",
+      "_blank"
+    );
+  };
+  const handleCloseRegister = () => {
+    setModalLive(false);
+    window.open(
+      "https://snekti.jurnal-puslitbangpln.id/submit/index.php/snekti2023/user/register",
+      "_blank"
+    );
+  };
   return (
     <>
       {collapseOpen ? (
@@ -154,13 +172,18 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://snekti.jurnal-puslitbangpln.id/submit/index.php/snekti2023/user/register"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  // href="https://snekti.jurnal-puslitbangpln.id/submit/index.php/snekti2023/user/register"
+                  // target="_blank"
+                  // rel="noopener noreferrer"
                   style={{
                     border: "1px solid #2c2c2c",
                     borderRadius: "15px",
                     color: "#2c2c2c",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    setModalLive(true);
+                    setRegister(true);
                   }}
                 >
                   <i
@@ -174,13 +197,18 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://snekti.jurnal-puslitbangpln.id/submit/index.php/snekti2023/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  // href="https://snekti.jurnal-puslitbangpln.id/submit/index.php/snekti2023/login"
+                  // target="_blank"
+                  // rel="noopener noreferrer"
                   style={{
                     border: "1px solid #2c2c2c",
                     borderRadius: "15px",
                     color: "#2c2c2c",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    setModalLive(true);
+                    setRegister(false);
                   }}
                 >
                   <i
@@ -274,6 +302,76 @@ function IndexNavbar() {
           </Collapse>
         </Container>
       </Navbar>
+      <Modal
+        className="modal-lg"
+        toggle={() => setModalLive(false)}
+        isOpen={modalLive}
+        centered
+      >
+        <div className="modal-header">
+          <h5
+            className="modal-title justify-self-center"
+            id="exampleModalLiveLabel"
+          >
+            IMPORTANT INFORMATION
+          </h5>
+          <button
+            aria-label="Close"
+            className="close"
+            type="button"
+            style={{ color: "#f9af1f", fontSize: "36px", padding: "10px" }}
+            onClick={register ? handleCloseRegister : handleClose}
+          >
+            <span aria-hidden={true}>×</span>
+          </button>
+        </div>
+        <div className="modal-body text-center">
+          <div style={{ borderBottom: "solid grey 1px" }}>
+            <p style={{ fontWeight: "bold", margin: 0 }}>
+              Jika anda mengikuti SNEKTI 2023, menggunakan username & password
+              yang lama
+            </p>
+          </div>
+          <div style={{ borderBottom: "solid grey 1px" }}>
+            <p style={{ fontWeight: "bold", margin: 0 }}>
+              Artikel yang disubmit harus sesuai template yang kami sediakan
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1h6E8t2R4_euo_XWkX3x39BX2W9Q4qGvM/view"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted"
+              style={{ fontSize: "20px" }}
+            >
+              Link Article Template
+            </a>
+          </div>
+          <div style={{ borderBottom: "solid grey 1px" }}>
+            <p style={{ fontWeight: "bold", margin: 0 }}>
+              Bagi Pemakalah yang sudah Register atau Submit Artikel SNEKTI 2024
+              silahkan Join Grup WA
+            </p>
+            <a
+              href="https://chat.whatsapp.com/BCyEnuKqgwiA0wsHB14dgr"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted"
+              style={{ fontSize: "20px" }}
+            >
+              Link Grup
+            </a>
+          </div>
+        </div>
+        <div className="modal-footer justify-content-end">
+          <Button
+            color="secondary"
+            type="button"
+            onClick={register ? handleCloseRegister : handleClose}
+          >
+            Close
+          </Button>
+        </div>
+      </Modal>
     </>
   );
 }

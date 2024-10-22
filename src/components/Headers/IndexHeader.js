@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // reactstrap components
 import { Container, Button, Row, Col } from "reactstrap";
@@ -21,6 +21,45 @@ function IndexHeader() {
       };
     }
   });
+  const [timeRemaining, setTimeRemaining] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const targetDate = new Date("2024-12-11T08:00:00"); // Set target date to 11 December 2024
+
+    const updateCountdown = () => {
+      const currentDate = new Date();
+      const difference = targetDate - currentDate;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeRemaining({ days, hours, minutes, seconds });
+      } else {
+        setTimeRemaining({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
+      }
+    };
+
+    const intervalId = setInterval(updateCountdown, 1000); // Update countdown every second
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, []);
 
   return (
     <>
@@ -65,6 +104,7 @@ function IndexHeader() {
             >
               Wednesday, 11 December 2024
             </h4> */}
+
             <div>
               <Button
                 className="btn-round"
@@ -84,6 +124,24 @@ function IndexHeader() {
               >
                 Submit Your Paper
               </Button>
+            </div>
+            <div>
+              <h3
+                style={{
+                  margin: 0,
+                  color: "#2c2c2c",
+                  fontWeight: "bold",
+                }}
+              >
+                {timeRemaining.days +
+                  "days : " +
+                  timeRemaining.hours +
+                  "hours : " +
+                  timeRemaining.minutes +
+                  "min : " +
+                  timeRemaining.seconds +
+                  "sec"}
+              </h3>
             </div>
             <div>
               <h2

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // reactstrap components
 import { Col, Container, Row, Button, Modal } from "reactstrap";
@@ -38,6 +38,20 @@ function LandingPage2() {
   });
 
   const [modalLive, setModalLive] = useState(true);
+  const [timer, setTimer] = useState(7);
+  const [isCloseDisabled, setIsCloseDisabled] = useState(true);
+  useEffect(() => {
+    if (timer > 0) {
+      const countdown = setTimeout(() => {
+        setTimer(timer - 1);
+      }, 1000);
+
+      // Cleanup the timer when component unmounts or re-renders
+      return () => clearTimeout(countdown);
+    } else {
+      setIsCloseDisabled(false); // Enable close button after timer reaches 0
+    }
+  }, [timer]);
 
   return (
     <>
@@ -310,8 +324,14 @@ function LandingPage2() {
             aria-label="Close"
             className="close"
             type="button"
-            style={{ color: "#f9af1f", fontSize: "36px", padding: "10px" }}
+            style={{
+              color: "#f9af1f",
+              fontSize: "36px",
+              padding: "10px",
+              cursor: `${isCloseDisabled ? "not-allowed" : "pointer"}`,
+            }}
             onClick={() => setModalLive(false)}
+            disabled={isCloseDisabled}
           >
             <span aria-hidden={true}>×</span>
           </button>
@@ -358,6 +378,8 @@ function LandingPage2() {
             color="secondary"
             type="button"
             onClick={() => setModalLive(false)}
+            disabled={isCloseDisabled}
+            style={{ cursor: `${isCloseDisabled ? "not-allowed" : "pointer"}` }}
           >
             Close
           </Button>
