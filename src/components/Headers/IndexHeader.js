@@ -133,6 +133,34 @@ function IndexHeader() {
                   fontWeight: "bold",
                 }}
               >
+                  <div className='countdown'>
+                    <div className='content'>
+                          <div className='box'>
+                            <div className='value'>
+                              <span>{timeRemaining.days}</span>
+                            </div>
+                            <span className='label'> days </span>
+                          </div>
+                          <div className='box'>
+                            <div className='value'>
+                              <span>{timeRemaining.hours}</span>
+                            </div>
+                            <span className='label'> hours </span>
+                          </div>
+                          <div className='box'>
+                            <div className='value'>
+                              <span>{timeRemaining.minutes}</span>
+                            </div>
+                            <span className='label'> minutes </span>
+                          </div>
+                          <div className='box'>
+                            <div className='value'>
+                              <span>{timeRemaining.seconds}</span>
+                            </div>
+                            <span className='label'> seconds </span>
+                          </div>
+                    </div>
+                  </div>
                 {timeRemaining.days +
                   "days : " +
                   timeRemaining.hours +
