@@ -75,11 +75,7 @@ function IndexNavbar() {
       >
         <Container>
           <div className="navbar-translate">
-            <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
-              id="navbar-brand"
-            >
+            <NavbarBrand href="https://snekti.itpln.ac.id" id="navbar-brand">
               <h3 style={{ fontWeight: "bold", margin: 0, color: "#2c2c2c" }}>
                 SNEKTI 2024
               </h3>
@@ -139,6 +135,7 @@ function IndexNavbar() {
                   </p>
                 </NavLink>
               </NavItem>
+
               <NavItem>
                 <NavLink
                   onClick={(e) => {

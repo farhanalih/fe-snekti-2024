@@ -59,58 +59,97 @@ function LandingPage2() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          {/* <div 
+          <div
             id="speaker-section"
             style={{
-              marginTop:"16px"
+              // marginTop: "16px",
+              padding: "10px",
+              backgroundImage:
+                "url(" + require("assets/img/v1_bgFee.png") + ")",
+              backgroundSize: "cover",
+              height: "100%",
+              width: "100%",
+              backgroundPosition: "center",
             }}
           >
             <Container>
-            <Row className="justify-content-center">
+              <Row className="justify-content-center">
                 <Col md="12" className="text-center ">
-                  <h2 className="title">Speaker</h2>
+                  <h2 className="title">Opening Speech, Keynote, & Speaker</h2>
                 </Col>
               </Row>
-            <Row className="justify-content-center">
-              <Col sm="2">
-                <img
-                  alt="..."
-                  className="rounded img-raised"
-                  src={require("assets/img/julie.jpg")}
-                ></img>
-                <p className="speaker-name">Prof. Dr. Ir. Iwa Garniwa Mulyana K., MT,IPU,ASEAN.Eng</p>
-                <p className="speaker-job">Rektor Institut Teknologi PLN</p>
-              </Col>
-              <Col sm="2">
-                <img
-                  alt="..."
-                  className="rounded img-raised"
-                  src={require("assets/img/julie.jpg")}
-                ></img>
-                <p className="speaker-name">Prof. Dr. Ir. Arief Sabdo Yuwono, M.Sc</p>
-                <p className="speaker-job">Guru Besar Bidang Teknik Lingkungan IPB University</p>
-              </Col>
-              <Col sm="2">
-                <img
-                  alt="..."
-                  className="rounded img-raised"
-                  src={require("assets/img/julie.jpg")}
-                ></img>
-                <p className="speaker-name">Prof. Ir. Muhammad Abduh M.T., PhD</p>
-                <p className="speaker-job">Guru Besar Bidang Civil Engineering ITB</p>
-              </Col>
-              <Col sm="2">
-                <img
-                  alt="..."
-                  className="rounded img-raised"
-                  src={require("assets/img/julie.jpg")}
-                ></img>
-                <p className="speaker-name">Ir. Suroso Isnandar., M.S.</p>
-                <p className="speaker-job">Direksi Manajemen Risiko PT PLN (Persero)</p>
-              </Col>
-            </Row>
-        </Container>
-          </div> */}
+              <Row className="justify-content-center">
+                <Col sm="2">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/iwav1.png")}
+                    style={{ width: "100%" }}
+                  ></img>
+                  <p className="speaker-name">
+                    Prof. Dr. Ir. Iwa Garniwa Mulyana K., MT,IPU,ASEAN.Eng
+                  </p>
+                  <p className="speaker-job">Rektor Institut Teknologi PLN</p>
+                </Col>
+                <Col sm="2">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/danisv1.png")}
+                    style={{ width: "100%" }}
+                  ></img>
+                  <p className="speaker-name">
+                    Dr. Ir. Danis Hidayat Sumadilaga, M. Eng. Sc., IPU., APEC
+                    Eng., ACPE
+                  </p>
+                  <p className="speaker-job">
+                    Plt. Deputi Bidang Sarana dan Prasarana Otorita Ibu Kota
+                    Nusantara.
+                  </p>
+                </Col>
+                <Col sm="2">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/ariefv1.png")}
+                    style={{ width: "100%" }}
+                  ></img>
+                  <p className="speaker-name">
+                    Prof. Dr. Ir. Arief Sabdo Yuwono, M.Sc.
+                  </p>
+                  <p className="speaker-job">
+                    Guru Besar Bidang Teknik Lingkungan IPB University
+                  </p>
+                </Col>
+                <Col sm="2">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/abduhv1.png")}
+                    style={{ width: "100%" }}
+                  ></img>
+                  <p className="speaker-name">
+                    Prof. Ir. Muhammad Abduh M.T., Ph.D
+                  </p>
+                  <p className="speaker-job">
+                    Guru Besar Bidang Civil Engineering ITB
+                  </p>
+                </Col>
+                <Col sm="2">
+                  <img
+                    alt="..."
+                    className="rounded img-raised"
+                    src={require("assets/img/surosov1.png")}
+                    style={{ width: "100%" }}
+                  ></img>
+                  <p className="speaker-name">Ir. Suroso Isnandar., M.S.</p>
+                  <p className="speaker-job">
+                    Direksi Manajemen Risiko PT PLN (Persero)
+                  </p>
+                </Col>
+              </Row>
+            </Container>
+          </div>
           <div
             className="section"
             style={{
@@ -422,6 +461,18 @@ function LandingPage2() {
               style={{ fontSize: "20px" }}
             >
               Link Grup
+            </a>
+          </div>
+          <div style={{ borderBottom: "solid grey 1px" }}>
+            <p style={{ fontWeight: "bold", margin: 0 }}>Flyer SNEKTI 2024</p>
+            <a
+              href="https://drive.google.com/file/d/1aI_-c3jXeua8XEnOliVGEdyedhVnEZV1/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted"
+              style={{ fontSize: "20px" }}
+            >
+              Download
             </a>
           </div>
         </div>

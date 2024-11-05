@@ -92,14 +92,18 @@
     font-size: 18px;
 }
 .speaker-name{
-    margin-top: 12px;
+    margin: 0px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 9px;
+    color: #FF5500;
+    text-align: center;
 }
 
 .speaker-job{
     margin: 0;
-    font-size: 18px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .countdown-subtext{

@@ -79,7 +79,7 @@ function IndexHeader() {
               className="n-logo"
               src={require("assets/img/logo-snekti-2024.png")}
               width={"80%"}
-              style={{ marginTop: "148px" }}
+              style={{ marginTop: "200px" }}
             ></img>
             <h2
               style={{
@@ -114,6 +114,7 @@ function IndexHeader() {
                   fontSize: "24px",
                   color: "white",
                   fontWeight: "bold",
+                  marginTop: "0px",
                 }}
                 onClick={() =>
                   window.open(
@@ -131,6 +132,7 @@ function IndexHeader() {
                   margin: 0,
                   color: "#2c2c2c",
                   fontWeight: "bold",
+                  marginTop: "16px",
                 }}
               >
                 <div className="countdown">
@@ -190,7 +192,7 @@ function IndexHeader() {
                   }}
                 >
                   <span style={{ fontWeight: "bold" }}>Submit abstract</span> :
-                  30 September 2024 - 3 November 2024
+                  30 September 2024 - 26 November 2024
                 </h3>
                 <h3
                   style={{
@@ -199,7 +201,7 @@ function IndexHeader() {
                   }}
                 >
                   <span style={{ fontWeight: "bold" }}>Submit full paper</span>{" "}
-                  : 1 October 2024 - 25 November 2024
+                  : 1 October 2024 - 30 November 2024
                 </h3>
                 <h3
                   style={{
