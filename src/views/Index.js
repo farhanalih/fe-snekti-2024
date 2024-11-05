@@ -59,7 +59,7 @@ function LandingPage2() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          <div 
+          {/* <div 
             id="speaker-section"
             style={{
               marginTop:"16px"
@@ -110,7 +110,7 @@ function LandingPage2() {
               </Col>
             </Row>
         </Container>
-          </div>
+          </div> */}
           <div
             className="section"
             style={{
@@ -121,9 +121,9 @@ function LandingPage2() {
               height: "100%",
               width: "100%",
               backgroundPosition: "center",
-            }}             
+            }}
             id="conference-fee"
-          >    
+          >
             <Container>
               <Row className="justify-content-center">
                 <Col md="12" className="text-center ">

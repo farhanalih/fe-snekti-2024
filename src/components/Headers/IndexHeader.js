@@ -133,42 +133,42 @@ function IndexHeader() {
                   fontWeight: "bold",
                 }}
               >
-                  <div className='countdown'>
-                    <div className='content'>
-                          <div className='box'>
-                            <div className='value'>
-                              <span>{timeRemaining.days}</span>
-                            </div>
-                            <span className='label'> days </span>
-                          </div>
-                          <div className='box'>
-                            <div className='value'>
-                              <span>{timeRemaining.hours}</span>
-                            </div>
-                            <span className='label'> hours </span>
-                          </div>
-                          <div className='box'>
-                            <div className='value'>
-                              <span>{timeRemaining.minutes}</span>
-                            </div>
-                            <span className='label'> minutes </span>
-                          </div>
-                          <div className='box'>
-                            <div className='value'>
-                              <span>{timeRemaining.seconds}</span>
-                            </div>
-                            <span className='label'> seconds </span>
-                          </div>
+                <div className="countdown">
+                  <div className="content">
+                    <div className="box">
+                      <div className="value">
+                        <span>{timeRemaining.days}</span>
+                      </div>
+                      <span className="label"> days </span>
+                    </div>
+                    <div className="box">
+                      <div className="value">
+                        <span>{timeRemaining.hours}</span>
+                      </div>
+                      <span className="label"> hours </span>
+                    </div>
+                    <div className="box">
+                      <div className="value">
+                        <span>{timeRemaining.minutes}</span>
+                      </div>
+                      <span className="label"> min </span>
+                    </div>
+                    <div className="box">
+                      <div className="value">
+                        <span>{timeRemaining.seconds}</span>
+                      </div>
+                      <span className="label"> sec </span>
                     </div>
                   </div>
-                {timeRemaining.days +
+                </div>
+                {/* {timeRemaining.days +
                   "days : " +
                   timeRemaining.hours +
                   "hours : " +
                   timeRemaining.minutes +
                   "min : " +
                   timeRemaining.seconds +
-                  "sec"}
+                  "sec"} */}
               </h3>
             </div>
             <div>
